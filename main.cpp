@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 #include "functions.hpp"
 
 int main() {
@@ -25,64 +26,33 @@ int main() {
     std::cout << "\nTIC-TAC-TOE game\n";
     show_grid(grid);
 
-    // if even then get move from player1
-    // if odd  then get move from player2
-    while (end == false && (choices1.size() + choices2.size() < 9)) {
-
+    // if even then get move from player1 else player 2
+    while ((choices1.size() + choices2.size()) < 9) {
         if((choices1.size() + choices2.size()) % 2 == 0) {
             std::cout << "Player 1: ";
             move = get_move(choices1, choices2);
             std::cout << "\n";
-            std::cout << "Move is: " << move << "\n\n";
             choices1.push_back(move);    
-            grid[move - 1] = 'x';
+            grid[move - 1] = 'X';
         } else {
             std::cout << "Player 2: ";
             move = get_move(choices1, choices2);
             std::cout << "\n";
-            std::cout << "Move is: " << move << "\n\n";
             choices2.push_back(move);
-            grid[move - 1] = 'o';
-        }
+            grid[move - 1] = 'O';
+        }        
 
-        std::cout << "Choices 1:\n";
-        std::cout << "Choices size:\n";
-        std::cout << choices1.size() << "\n\n";
-        std::cout << "Choices values:\n";
-        for(int i = 0; i < choices1.size(); i++) {
-            std::cout << choices1[i] << "\n";
-        }
-        std::cout << "\n";
-
-        std::cout << "Choices 2:\n";
-        std::cout << "Choices size:\n";
-        std::cout << choices2.size() << "\n\n";
-        for(int i = 0; i < choices2.size(); i++) {
-            std::cout << choices2[i] << "\n";
-        }
-        std::cout << "\n";
-
-        std::cout << "\n";
-
-        //check if winning combination 
-
+        //show grid after making a move
         show_grid(grid);
+
+        //check if it's winning combination
+        if(is_winning(choices1) || is_winning(choices2)) {    
+            std::cout << "You are a WINNER!!! Congratulations!!!\n";
+            return 0;
+        }
     }
     
-
-   
-    //check if set of moves is a win
-    // 1, 2, 3
-    // 4, 5, 6
-    // 7, 8, 9
-    // 1, 4, 7
-    // 2, 5, 8
-    // 3, 6, 9
-    // 1, 5, 9
-    // 3, 5, 7
-
-    // if not show grid
-    // if yes end game
+    std::cout << "It's a draw! Congratulations to both players!";
 
     return 0;
 }
