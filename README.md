@@ -1,3 +1,3 @@
-Old but gold... the TIC-TAC-TOE game!
+Gra w kółko i krzyżyk
 
 ![](img/image.png)
