@@ -20,11 +20,11 @@ You’ll probably need two switch statements: one for input and one for output.*
 
 using namespace std;
 
-enum employee {laborer, secretary, manager, accountant, executive, researcher};
+enum etype {laborer, secretary, manager, accountant, executive, researcher};
 
 int main() {
     char type;
-    employee e;
+    etype e;
     
     cout << "Enter employee type (first letter only: laborer, secretary, manager, accountant, executive, researcher): ";
 
