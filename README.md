@@ -2,7 +2,7 @@
 
 ## Lafore
 
-Examples and exercises from the book *Object-Oriented Programming in C++" by Robert Lafore (4th edition).
+Examples and exercises from the book "Object-Oriented Programming in C++" by Robert Lafore (4th edition).
 
 ## Tic tac toe
 
