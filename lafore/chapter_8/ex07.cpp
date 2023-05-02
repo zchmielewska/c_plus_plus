@@ -1,12 +1,3 @@
-/*Modify the fraction class in the four-function fraction calculator from Exercise 11 in
-Chapter 6 so that it uses overloaded operators for addition, subtraction, multiplication,
-and division. (Remember the rules for fraction arithmetic in Exercise 12 in Chapter 3,
-“Loops and Decisions.”) Also overload the == and != comparison operators, and use them
-to exit from the loop if the user enters 0/1, 0/1 for the values of the two input fractions.
-You may want to modify the lowterms() function so that it returns the value of its argument
-reduced to lowest terms. This makes it more useful in the arithmetic functions, where it
-can be applied just before the answer is returned.*/
-
 #include <iostream>
 #include <stdlib.h>
 

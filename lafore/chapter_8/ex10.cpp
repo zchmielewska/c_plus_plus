@@ -1,10 +1,3 @@
-/*For math buffs only: Create a class Polar that represents the points on the plain as polar
-coordinates (radius and angle). Create an overloaded +operator for addition of two
-Polar quantities. “Adding” two points on the plain can be accomplished by adding their
-X coordinates and then adding their Y coordinates. This gives the X and Y coordinates of
-the “answer.” Thus you’ll need to convert two sets of polar coordinates to rectangular
-coordinates, add them, then convert the resulting rectangular representation back to polar.*/
-
 #include <iostream>
 #include <math.h>
 
