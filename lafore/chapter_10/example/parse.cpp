@@ -26,6 +26,12 @@ class Stack {
         int gettop() {
             return top;
         }
+
+        void show_stack() {
+            for (int i=0; i<=top; i++) {
+                cout << i << ": " << st[i] << endl;
+            }
+        }
 };
 
 class express {
@@ -41,6 +47,9 @@ class express {
 
         void parse();
         int solve();
+        void show_stack() {
+            s.show_stack();
+        }
 };
 
 void express::parse() {
@@ -110,6 +119,7 @@ int main() {
         cout << "\nEnter expression: "; cin >> string;
         express* eptr = new express(string);
         eptr->parse();
+        eptr->show_stack();
         cout << "\nThe numerical value is: " << eptr->solve();
         delete eptr;
         cout << "\nDo another (Enter y or n)?"; cin >> ans;
